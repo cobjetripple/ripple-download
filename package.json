@@ -1,0 +1,19 @@
+{
+  "name": "ripple-client-download",
+  "version": "0.0.0",
+  "description": "Download page for the Ripple Client.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yongsoo/ripple-download.git"
+  },
+  "author": "Yong-Soo Chung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yongsoo/ripple-download/issues"
+  },
+  "homepage": "https://github.com/yongsoo/ripple-download"
+}
