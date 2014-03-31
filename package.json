@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/yongsoo/ripple-download/issues"
   },
-  "homepage": "https://github.com/yongsoo/ripple-download"
+  "homepage": "https://github.com/yongsoo/ripple-download",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-replace": "^0.7.6"
+  }
 }
