@@ -7,9 +7,5 @@ var pkgFileName = 'package.json',
 var pkgFile = path.join(pkgFilePath, pkgFileName);
 
 module.exports = function() {
-  return JSON.parse(fs.readFileSync(pkgFile, 'utf8', function(err, data) {
-    if (err) {
-      console.log("Read error: ", err);
-    }
-  }));
+  return JSON.parse(fs.readFileSync(pkgFile, 'utf8'));
 }
