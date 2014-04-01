@@ -1,11 +1,5 @@
-var path = require('path'),
-    fs = require('fs');
-
-var pkgFilename = 'package.json',
-    pkgFilePath = './ripple-client/';
-
-var pkgFile = path.join('pkgFilename', 'pkgFilePath');
-
+var config = require('./config.js')();
+  
 module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-replace');
 
@@ -16,10 +10,11 @@ module.exports = function (grunt) {
         options: {
           patterns: [
             {
-              match: 'version',
-              replacement: 'v'
+              match: /\s\d{1,2}\.\d{1,2}\.\d{1,2}/g,
+              replacement: ' ' + config.version
             }
-          ]
+          ],
+          prefix: ''
         },
         files: [
           {expand: true, flatten: true, src: ['downloads.html'], dest: './'}
@@ -27,6 +22,6 @@ module.exports = function (grunt) {
       }
     }
   });
-  
+
   grunt.registerTask('default', 'replace');
-};
+}; 
