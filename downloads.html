@@ -13,7 +13,8 @@
 
         <link rel="stylesheet" href="css/main.css">
         
-        <script src="js/modernizr-0.2.48-respond-0.2.48.min.js"></script>
+        <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="config.js"></script>
     </head>
     <body>
 
@@ -27,7 +28,6 @@
             </header>
 
   <div class="container main-container">
-
     
     <div class="auth-form-container sign-up-container">
     
@@ -43,7 +43,8 @@
             <img src="img/mac.png">
             <div class="os-data">
               <p><strong>Mac OS X</strong></p>
-              <p>version 0.2.48</p>
+              <p>version <script>document.write(config.mac.version)</script></p>
+              <p><script>document.write(config.mac.size)</script></p>
             </div>
           </li>
           <li>
@@ -51,15 +52,26 @@
             <img src="img/win.png">
             <div class="os-data">
               <p><strong>Windows</strong></p>
-              <p>version 0.2.48</p>
+              <p>version <script>document.write(config.win.version)</script></p>
+              <p><script>document.write(config.win.size)</script></p>
             </div>
           </li>
           <li>
             <input type="radio"  name="optionsRadios" id="optionsRadios3" value="option3">
             <img src="img/linux.png">
             <div class="os-data">
-              <p><strong>Linux</strong></p>
-              <p>version 0.2.48</p>
+              <p><strong>Linux (32-bit)</strong></p>
+              <p>version <script>document.write(config.linux32.version)</script></p>
+              <p><script>document.write(config.linux32.size)</script></p>
+            </div>
+          </li>
+          <li>
+            <input type="radio"  name="optionsRadios" id="optionsRadios4" value="option4">
+            <img src="img/linux.png">
+            <div class="os-data">
+              <p><strong>Linux (64-bit)</strong></p>
+              <p>version <script>document.write(config.linux64.version)</script></p>
+              <p><script>document.write(config.linux64.size)</script></p>
             </div>
           </li>
         </ul>
@@ -81,17 +93,6 @@
            Footer
        </div>
   </footer>
-
-  <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/0.2.48/jquery.min.js"></script>-->
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-0.2.48.min.js"><\/script>')</script>
-
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Main js file -->
-    <script src="js/main.js"></script>
-
-    <!-- Page specific js files -->
-    <script src="js/home.js"></script>
         
-    </body>
+  </body>
 </html>

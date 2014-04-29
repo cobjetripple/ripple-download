@@ -1,11 +1,20 @@
-var path = require('path'),
-    fs = require('fs');
-
-var pkgFileName = 'package.json',
-    pkgFilePath = './ripple-client/';
-
-var pkgFile = path.join(pkgFilePath, pkgFileName);
-
-module.exports = function() {
-  return JSON.parse(fs.readFileSync(pkgFile, 'utf8'));
+var config = {
+  linux32: {
+    version: '1.0',
+    size: '10mb'
+  },
+  linux64: {
+    version: '1.0',
+    size: '10mb'
+  },
+  mac: {
+    version: '1.0',
+    size: '10mb'
+  },
+  win: {
+    version: '1.0',
+    size: '10mb'
+  }
 }
+
+//TODO: script for getting file sizes
