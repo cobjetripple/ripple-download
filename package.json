@@ -1,23 +1,23 @@
 {
   "name": "ripple-client-download",
-  "version": "0.0.0",
-  "description": "Download page for the Ripple Client.",
-  "main": "Gruntfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "0.0.1",
+  "description": "Download page for the Ripple Client",
+  "main": "downloads.html",
+  "author": {
+    "name": "Ripple Labs, Inc.",
+    "email": "info@ripple.com",
+    "url": "https://ripple.com/"
   },
+  "dependencies": {
+    "grunt": "^0.4.4"
+  },
+  "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yongsoo/ripple-download.git"
+    "url": "git://github.com/ripple/ripple-client.git"
   },
-  "author": "Yong-Soo Chung",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yongsoo/ripple-download/issues"
-  },
-  "homepage": "https://github.com/yongsoo/ripple-download",
+  "homepage": "https://github.com/ripple/ripple-download.git",
   "devDependencies": {
-    "grunt": "^0.4.4",
-    "grunt-replace": "^0.7.6"
+    "grunt-aws": "^0.3.0"
   }
 }

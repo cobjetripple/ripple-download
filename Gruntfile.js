@@ -1,27 +1,26 @@
-var config = require('./config.js')();
-  
 module.exports = function (grunt) {
-  grunt.loadNpmTasks('grunt-replace');
+  grunt.loadNpmTasks('grunt-aws');
+
+  var aws = grunt.file.readJSON('config.json');
 
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    replace: {
-      dist: {
-        options: {
-          patterns: [
-            {
-              match: /\s\d{1,2}\.\d{1,2}\.\d{1,2}/g,
-              replacement: ' ' + config.version
-            }
-          ],
-          prefix: ''
-        },
-        files: [
-          {expand: true, flatten: true, src: ['downloads.html'], dest: './'}
-        ]
+    aws: {
+      accessKeyId: aws.key,
+      secretAccessKey: aws.secret
+    },
+    s3: {
+      options: {
+        accessKeyId: aws.key,
+        secretAccessKey: aws.secret,
+        bucket: aws.bucket,
+        enableWeb: true
+      },
+      build: {
+        cwd: 'build/',
+        src: '**'
       }
     }
   });
 
-  grunt.registerTask('default', 'replace');
+  grunt.registerTask('default', ['s3']);
 }; 
