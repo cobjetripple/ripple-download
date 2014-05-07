@@ -9,7 +9,6 @@ $(document).ready(function() {
 
   $('#download-btn').on('click', function() {
     var selected = $('input[name=optionsRadios]:checked').val();
-    console.log(selected);
 
     if (selected === 'mac') {
       document.getElementById('download-btn').action = downloadLink.mac;
