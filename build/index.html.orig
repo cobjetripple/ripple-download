@@ -87,7 +87,11 @@
 
   <footer>
        <div class="container footer-container">
-           &#169; 2012-2014 Ripple Labs Inc. under the <a href="http://opensource.org/licenses/ISC" target="_blank">ISC license</a>
+<<<<<<< HEAD
+           &#169; 2012-2014 Ripple Labs Inc. 
+=======
+           &#169; 2012-2014 Ripple Labs Inc.
+>>>>>>> [CHORE] Change footer copy
        </div>
   </footer>
         
